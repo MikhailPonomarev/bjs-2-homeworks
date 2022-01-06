@@ -27,14 +27,34 @@ function worker(arr) {
 
     // Ваш код
 
+    sum = 0;
+
+    for (let element of arr) {
+        sum += element;
+    }
+
     return sum;
 }
 
 function makeWork(arrOfArr, func) {
     let max;
 
-    // Ваш кода
-    // for ...
+    // Ваш код
+    let resultArr = [];
+    max = resultArr[0];
+
+    for (let element of arrOfArr) {
+        let sumOfArray = func(element);
+        resultArr.push(sumOfArray);
+    }
+
+    for (let element of resultArr) {
+        if (element > max) {
+            max = element;
+        } else {
+            max = resultArr[0];
+        }
+    }
 
     return max;
 }
