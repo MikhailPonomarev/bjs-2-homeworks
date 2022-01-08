@@ -24,7 +24,6 @@ function getArrayParams(arr) {
 // Задание 2
 function worker(arr) {
     let sum;
-
     // Ваш код
 
     sum = 0;
@@ -62,4 +61,10 @@ function makeWork(arrOfArr, func) {
 // Задание 3
 function worker2(arr) {
     // Ваш код
+    let difference;
+
+    let lastArrIndex = arr.length - 1;
+    difference = Math.abs(arr[0] - arr[lastArrIndex]);
+
+    return difference;
 }
